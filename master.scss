@@ -1,0 +1,228 @@
+@import 'variables.scss';
+
+:root {
+    background-color: $bg-color-dark;
+    color: $main;
+    font-family: 'Mukta', sans-serif;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    aside {
+        background-color: $bg-color-light;
+        width: 6vw;
+        height: 100vh;
+        box-shadow: 2vw 0 2vw rgba($color: #0e0e0e, $alpha: .3);
+        z-index: 2;
+        
+        #logo {
+            font-family: 'Bebas Neue';
+            font-size: $big;
+            color: $red;
+
+
+            text-align: center;
+            padding-top: 2.3vw;
+        }
+    }
+
+    section  {
+        box-shadow: 1vw 0 2vw rgba($color: #0e0e0e, $alpha: .3);
+        z-index: 1;
+        .navlist {
+            width: 15vw;
+            height: 100vh;
+            background-color: $bg-color;
+            
+            
+            ul {
+                padding-top: 2vw;
+                padding-left: 4vw;
+                margin: 0;         
+                
+                #search {
+                    margin-top: 0.5vw;
+                    margin-bottom: 2vw;
+                    width: 10vw;
+                    font-size: $medium;
+                    color: $light-gray;
+                    background-color: $bg-color;
+                    border-width: 0;
+                }
+
+                li {
+                    list-style: none;
+                    margin-top: 0.5vw;
+                    
+                    p {
+                        color: $main;
+                        font-size: 1.7vw;
+                        margin-bottom: 0;
+                    }
+                    
+                    button {
+                        
+                        font-size: $medium;
+                        color: $light-gray;
+                        background-color: $bg-color;
+                        border-width: 0;
+                        cursor: pointer;
+                        padding: 0;
+
+                        text-decoration: none;
+                        transition: ease 0.3s;
+                    }   
+                    
+                    button:hover {
+                        color: $main;
+                    }
+                }
+                #films {
+                    display: flex;
+                    width: fit-content;
+                    background-color: $bg-color-lighter;
+                }
+        
+                .film-card {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 4vw;
+                    margin-bottom: 1vw;                   
+                    color: $light-gray;
+
+                    span {
+                        padding-left: 0.1vw;
+                        color: $main;
+                        font-size: 1.7vw;
+                    }
+
+                    #input-film-name {
+                        width: 8vw;
+                        font-size: $medium;                    
+                        border-width: 0;
+                        margin-bottom: 0.2vw;
+                        background-color: rgba($color: #000000, $alpha: 0);
+                    }
+
+
+        
+                    #input-duration {
+                        width: 8vw;
+                        border-width: 0;
+                        margin-bottom: 0.2vw;
+                        background-color: rgba($color: #000000, $alpha: 0);
+                    }
+        
+                    #input-film-rating {
+                        width: 8vw;                    
+                        border-width: 0;
+                        background-color: rgba($color: #000000, $alpha: 0);
+                    }
+
+                    #edit-film-name {
+                        width: 8vw;
+                        font-size: $medium;                    
+                        border-width: 0;
+                        margin-bottom: 0.2vw;
+                        background-color: rgba($color: #000000, $alpha: 0);
+                    }
+
+
+        
+                    #edit-duration {
+                        width: 8vw;
+                        border-width: 0;
+                        margin-bottom: 0.2vw;
+                        background-color: rgba($color: #000000, $alpha: 0);
+                    }
+        
+                    #edit-film-rating {
+                        width: 8vw;                    
+                        border-width: 0;
+                        background-color: rgba($color: #000000, $alpha: 0);
+                    }
+                }
+        
+                #create {
+                    cursor: pointer;
+                    background-color: $red;
+                    width: 2vw;
+                    height: 2vw;
+                    border-width: 0;
+                    border-radius: 50%;
+                    color: $main;
+                    padding: 0;
+                    margin-right: 0.5vw;
+                }
+                #delete {
+                    cursor: pointer;
+                    background-color: $red;
+                    width: 2vw;
+                    height: 2vw;
+                    border-width: 0;
+                    border-radius: 50%;
+                    color: $main;
+                    margin-right: 0.5vw;
+                }
+                #edit {
+                    cursor: pointer;
+                    background-color: $red;
+                    width: 2vw;
+                    height: 2vw;
+                    border-width: 0;
+                    border-radius: 50%;
+                    margin-right: 0.5vw;
+                    color: $main;
+                }
+            }                    
+        }        
+    }
+    article {
+        min-width: 78%;
+        background-color: $bg-color-light;
+        padding-top: 3vw;
+        padding-left: 2vw;
+        
+        p {
+            margin: 0;
+        }
+
+        #films {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            grid-gap: 1.5vw;
+        }
+
+        .film {
+            text-align: center;
+            width: 12vw;
+            height: 8vw;
+            background-color: $red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            font-family: 'Bebas Neue';
+            box-shadow: 2vw 0 3vw rgba($color: #000000, $alpha: .5);
+            border-radius: 5%;
+            
+
+            .film-name {                
+                letter-spacing: 0.1vw;  
+                line-height: 1.8vw;              
+                font-size: $big;
+            }
+
+            .duration {                
+                font-size: $medium;
+                letter-spacing: 0.1vw;
+            }
+
+            .film-rating {
+                font-size: $medium;
+            }                        
+        }
+    }
+}
