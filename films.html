@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Beblix</title>
+        <link rel="stylesheet" href="./stylesheet/master.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <script src="./app.js"></script>
+    </head>
+    <body>
+        <div class="modal-wrapper">
+            <div class="modal">
+                <div class="error-header">Error</div>
+                <div class="error-text"></div>
+                <button class="confirm-btn" onclick="closeModal()">Confirm</button>
+            </div>
+        </div>   
+        <aside>
+            <div id="logo">Beb</div>            
+        </aside>        
+        <section>
+            <nav class="navlist">
+                <ul class="sort-nav">
+                    <li><input type="search" id="search" placeholder="Search" onkeyup="search()"></li>
+                    <li><button onclick="sortByName()">A-Z</button></li>
+                    <!-- <li><button>Duration ASC</button></li>
+                    <li><button>Duration DESC</button></li>
+                    <li><button>Most rated</button></li> -->
+                    <li><button onclick="showTotalHrs()" id="totalTime">Total hrs</button></li>
+                    <li>
+                        <form class="film-card" action="/" method="POST"> 
+                            <span>Add film card</span>
+                            <input type="text" id="input-film-name" placeholder="Film name">
+                            <input type="number" id="input-duration" placeholder="Film duration">
+                            <input type="number" id="input-film-rating" placeholder="Film rating">
+                            <input type="submit" id="create" onclick="inputValidation()" value="+">
+                        </form>
+                        <!-- <li>
+                            <button id="create" onclick="addFilmCard(); inputValidation()">+</button>
+                            <button id="delete" onclick="deleteFilm()">&#xd7;</button>                            
+                        </li> -->
+                        <li>
+                            <p>Edit film cards</p>
+                            <button class="edit" onclick="startEditingCard()">&#x270E;</button>
+                            <button class="edit" onclick="stopEditingCard()">✓</button>   
+                        </li>
+                    </li>                                                       
+                </ul>
+            </nav>            
+        </section>
+        <article >
+            <div id="films">                
+            </div>                     
+        </article>
+    </body>
+</html>
+
+<!-- - назва
+- тривалість в хвилинах
+- кількість відгуків на IMDB -->
